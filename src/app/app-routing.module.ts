@@ -4,12 +4,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)},
   {
-    path: 'species',
-    loadChildren: () => import('./pages/species/species.module').then( m => m.SpeciesPageModule)
+    path: 'films',
+    loadChildren: () => import('./pages/films/films.module').then( m => m.FilmsPageModule)
   },
   {
-    path: 'speciesspaceships',
-    loadChildren: () => import('./pages/speciesspaceships/speciesspaceships.module').then( m => m.SpeciesspaceshipsPageModule)
+    path: 'film-details',
+    loadChildren: () => import('./pages/film-details/film-details.module').then( m => m.FilmDetailsPageModule)
+  }
+  {
+    path: 'species',
+    loadChildren: () => import('./pages/species/species.module').then( m => m.SpeciesPageModule)
   },
   {
     path: 'specimen-details',
