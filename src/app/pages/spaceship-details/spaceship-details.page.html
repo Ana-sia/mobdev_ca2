@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>spaceship-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(starship:starship)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ starship?.name }}</ion-title>
+    <ion-buttons slot="end">
+      
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding="">
+ 
+   
+    <ion-item class="spaceship-info" lines="none">
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      Number of crew: {{ starship.crew }}
+    </ion-item>
+ 
+    <ion-item class="spaceship-info" lines="none">
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      Number of passangers: {{ starship.passengers }}
+    </ion-item>
 
+    <ion-item class="spaceship-info" lines="none">
+      <ion-icon name="airplane-outline"></ion-icon>" slot="start"></ion-icon>
+      Length: {{ starship.length }}
+    </ion-item>
+  </ion-card>
+ 
 </ion-content>

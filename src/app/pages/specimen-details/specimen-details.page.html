@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>specimen-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/(species:species)">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ specimen?.name }}</ion-title>
+    <ion-buttons slot="end">
+      
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content padding="">
+    
+    <ion-item class="specimen-info" lines="none">
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      Name: {{ specimen.name }}
+    </ion-item>
+ 
+    <ion-item class="specimen-info" lines="none">
+      <ion-icon name="people-circle-outline" slot="start"></ion-icon>
+      Classification: {{ specimen.classification }}
+    </ion-item>
 
-<ion-content>
+    <ion-item class="specimen-info" lines="none">
+      <ion-icon name="language-outline"></ion-icon>" slot="start"></ion-icon>
+      Language: {{ specimen.language }}
+    </ion-item>
 
+
+  </ion-card>
 </ion-content>
